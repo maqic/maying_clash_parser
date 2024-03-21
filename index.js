@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 module.exports.parse = async (raw, { axios, yaml, notify, console }, { name, url, interval, selected }) => {
     const obj = yaml.parse(raw);
     const CUSTOM_RULES = [
@@ -26,7 +27,9 @@ module.exports.parse = async (raw, { axios, yaml, notify, console }, { name, url
         ...openaiRules,
         ...obj.rules,
     ];
+
     obj.proxies = excludeV3Proxies;
+
     obj['proxy-groups'] = [
         ...obj['proxy-groups'],
         usProxyGroup,
