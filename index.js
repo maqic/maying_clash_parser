@@ -4,6 +4,7 @@ module.exports.parse = async (raw, { axios, yaml, notify, console }, { name, url
     const CUSTOM_RULES = [
         'DOMAIN-SUFFIX,maqicxu.com,🔰国外流量',
         'DOMAIN-SUFFIX,199258.xyz,🔰国外流量',
+        'DOMAIN-KEYWORD,openai-us,🇺🇸美国节点',
     ];
     const excludeV3Proxies = obj.proxies.filter(p => !p.name.includes('V3'));
     const usProxyGroup = {
