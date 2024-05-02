@@ -23,11 +23,12 @@ module.exports.parse = async (raw, { axios, yaml, notify, console }, { name, url
         notify('获取 OpenAI 规则失败', err.message);
     }
 
+    // remove rules startWith IP-ASN
     obj.rules = [
         ...CUSTOM_RULES,
         ...openaiRules,
         ...obj.rules,
-    ];
+    ].filter(el => !el.startsWith('IP_ASN'));
 
     obj.proxies = excludeV3Proxies;
 
