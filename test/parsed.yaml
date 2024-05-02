@@ -1771,7 +1771,6 @@ rules:
   - DOMAIN-KEYWORD,openai,🇺🇸美国节点
   - IP-CIDR,24.199.123.28/32,🇺🇸美国节点
   - IP-CIDR,64.23.132.171/32,🇺🇸美国节点
-  - IP-ASN,20473,🇺🇸美国节点
   - DOMAIN-SUFFIX,smtp,DIRECT
   - DOMAIN-KEYWORD,aria2,DIRECT
   - DOMAIN-SUFFIX,ampproject.org,🔰国外流量
