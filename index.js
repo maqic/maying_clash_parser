@@ -6,12 +6,10 @@ module.exports.parse = async (raw, { axios, yaml, notify, console }, { name, url
         'DOMAIN-SUFFIX,199258.xyz,🔰国外流量',
         'DOMAIN-KEYWORD,openai-us,🇺🇸美国节点',
     ];
-    // const excludeV3Proxies = obj.proxies.filter(p => !p.name.includes('V3'));
-    const excludeV3Proxies = obj.proxies;
     const usProxyGroup = {
         name: '🇺🇸美国节点',
         type: 'select',
-        proxies: excludeV3Proxies.map(p => p.name).filter(name => name.includes('US')),
+        proxies: obj.proxies.map(p => p.name).filter(name => name.includes('US')),
     };
 
     const OPENAI_REMOTE_RULE = 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.yaml';
@@ -30,18 +28,6 @@ module.exports.parse = async (raw, { axios, yaml, notify, console }, { name, url
         ...openaiRules,
         ...obj.rules,
     ].filter(el => !el.startsWith('IP_ASN'));
-
-    obj.proxies = excludeV3Proxies;
-
-    obj['proxy-groups'] = [
-        ...obj['proxy-groups'],
-        usProxyGroup,
-    ].map(g => {
-        // remove all V3 proxies
-        g.proxies = g.proxies.filter(p => !p.includes('V3'));
-
-        return g;
-    });
 
     return yaml.stringify(obj);
 }
