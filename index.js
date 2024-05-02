@@ -29,5 +29,10 @@ module.exports.parse = async (raw, { axios, yaml, notify, console }, { name, url
         ...obj.rules,
     ].filter(el => !el.startsWith('IP_ASN'));
 
+    obj['proxy-groups'] = [
+        ...obj['proxy-groups'],
+        usProxyGroup,
+    ];
+
     return yaml.stringify(obj);
 }
