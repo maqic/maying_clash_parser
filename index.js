@@ -6,7 +6,8 @@ module.exports.parse = async (raw, { axios, yaml, notify, console }, { name, url
         'DOMAIN-SUFFIX,199258.xyz,🔰国外流量',
         'DOMAIN-KEYWORD,openai-us,🇺🇸美国节点',
     ];
-    const excludeV3Proxies = obj.proxies.filter(p => !p.name.includes('V3'));
+    // const excludeV3Proxies = obj.proxies.filter(p => !p.name.includes('V3'));
+    const excludeV3Proxies = obj.proxies;
     const usProxyGroup = {
         name: '🇺🇸美国节点',
         type: 'select',
