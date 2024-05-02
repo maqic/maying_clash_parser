@@ -1722,6 +1722,25 @@ proxy-groups:
     type: select
     proxies:
       - DIRECT
+  - name: 🇺🇸美国节点
+    type: select
+    proxies:
+      - 🇺🇸 V380U-1X-BGP-US-NF
+      - 🇺🇸 V381U-1X-BGP-US-NF
+      - 🇺🇸 V382U-1X-BGP-US-NF
+      - 🇺🇸 V383U-1X-BGP-US-NF
+      - 🇺🇸 V386U-2X-BGP-US-NF
+      - 🇺🇸 V387U-2X-BGP-US-NF
+      - 🇺🇸 V388U-2X-BGP-US-NF
+      - 🇺🇸 V389U-2X-BGP-US-NF
+      - 🇺🇸 V480U-1X-BGP-US-NF
+      - 🇺🇸 V481U-1X-BGP-US-NF
+      - 🇺🇸 V482U-1X-BGP-US-NF
+      - 🇺🇸 V483U-1X-BGP-US-NF
+      - 🇺🇸 V486U-2X-BGP-US-NF
+      - 🇺🇸 V487U-2X-BGP-US-NF
+      - 🇺🇸 V488U-2X-BGP-US-NF
+      - 🇺🇸 V489U-2X-BGP-US-NF
 rules:
   - DOMAIN-SUFFIX,maqicxu.com,🔰国外流量
   - DOMAIN-SUFFIX,199258.xyz,🔰国外流量

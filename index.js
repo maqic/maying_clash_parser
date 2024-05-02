@@ -27,7 +27,7 @@ module.exports.parse = async (raw, { axios, yaml, notify, console }, { name, url
         ...CUSTOM_RULES,
         ...openaiRules,
         ...obj.rules,
-    ].filter(el => !el.startsWith('IP_ASN'));
+    ].filter(el => !el.startsWith('IP-ASN'));
 
     obj['proxy-groups'] = [
         ...obj['proxy-groups'],
