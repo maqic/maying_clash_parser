@@ -1744,8 +1744,15 @@ proxy-groups:
 rules:
   - DOMAIN-SUFFIX,maqicxu.com,🔰国外流量
   - DOMAIN-SUFFIX,199258.xyz,🔰国外流量
+  - DOMAIN-SUFFIX,visualstudio.com,🔰国外流量
   - DOMAIN-KEYWORD,openai-us,🇺🇸美国节点
   - DOMAIN,browser-intake-datadoghq.com,🇺🇸美国节点
+  - DOMAIN,chat.openai.com.cdn.cloudflare.net,🇺🇸美国节点
+  - DOMAIN,gemini.google.com,🇺🇸美国节点
+  - DOMAIN,openai-api.arkoselabs.com,🇺🇸美国节点
+  - DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net,🇺🇸美国节点
+  - DOMAIN,openaicomproductionae4b.blob.core.windows.net,🇺🇸美国节点
+  - DOMAIN,production-openaicom-storage.azureedge.net,🇺🇸美国节点
   - DOMAIN,static.cloudflareinsights.com,🇺🇸美国节点
   - DOMAIN-SUFFIX,ai.com,🇺🇸美国节点
   - DOMAIN-SUFFIX,algolia.net,🇺🇸美国节点
@@ -1764,6 +1771,9 @@ rules:
   - DOMAIN-SUFFIX,oaistatic.com,🇺🇸美国节点
   - DOMAIN-SUFFIX,oaiusercontent.com,🇺🇸美国节点
   - DOMAIN-SUFFIX,observeit.net,🇺🇸美国节点
+  - DOMAIN-SUFFIX,openai.com,🇺🇸美国节点
+  - DOMAIN-SUFFIX,openaiapi-site.azureedge.net,🇺🇸美国节点
+  - DOMAIN-SUFFIX,openaicom.imgix.net,🇺🇸美国节点
   - DOMAIN-SUFFIX,segment.io,🇺🇸美国节点
   - DOMAIN-SUFFIX,sentry.io,🇺🇸美国节点
   - DOMAIN-SUFFIX,stripe.com,🇺🇸美国节点
@@ -1771,6 +1781,9 @@ rules:
   - DOMAIN-KEYWORD,openai,🇺🇸美国节点
   - IP-CIDR,24.199.123.28/32,🇺🇸美国节点
   - IP-CIDR,64.23.132.171/32,🇺🇸美国节点
+  - DOMAIN,cdn.usefathom.com,🇺🇸美国节点
+  - DOMAIN-SUFFIX,anthropic.com,🇺🇸美国节点
+  - DOMAIN-SUFFIX,claude.ai,🇺🇸美国节点
   - DOMAIN-SUFFIX,smtp,DIRECT
   - DOMAIN-KEYWORD,aria2,DIRECT
   - DOMAIN-SUFFIX,ampproject.org,🔰国外流量

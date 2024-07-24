@@ -13,20 +13,24 @@ module.exports.parse = async (raw, { axios, yaml, notify, console }, { name, url
         proxies: obj.proxies.map(p => p.name).filter(name => name.includes('US')),
     };
 
-    const OPENAI_REMOTE_RULE = 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.yaml';
+    const US_REMOTE_RULE = [
+        'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.yaml',
+        'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Claude/Claude.yaml',
+    ];
+    let usRules = [];
 
-    let openaiRules = [];
     try {
-        const openaiRulesText = await axios.get(OPENAI_REMOTE_RULE).then(res => res.data);
-        openaiRules = yaml.parse(openaiRulesText).payload.map(el => `${el},${usProxyGroup.name}`);
+        const ruleCollection = await Promise.all(US_REMOTE_RULE.map(url => axios.get(url).then(res => res.data)));
+        const payload = ruleCollection.map(yaml.parse).map(el => el.payload).flat();
+        usRules = payload.map(el => `${el},${usProxyGroup.name}`);
     } catch (err) {
-        notify('获取 OpenAI 规则失败', err.message);
+        notify('remote rules failed', err.message);
     }
 
     // remove rules startWith IP-ASN
     obj.rules = [
         ...CUSTOM_RULES,
-        ...openaiRules,
+        ...usRules,
         ...obj.rules,
     ].filter(el => !el.startsWith('IP-ASN'));
 
