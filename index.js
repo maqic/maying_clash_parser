@@ -6,6 +6,14 @@ module.exports.parse = async (raw, { axios, yaml, notify, console }, { name, url
         'DOMAIN-SUFFIX,199258.xyz,🔰国外流量',
         'DOMAIN-SUFFIX,visualstudio.com,🔰国外流量',
         'DOMAIN-KEYWORD,openai-us,🇺🇸美国节点',
+        'DOMAIN-SUFFIX,steam-chat.com,🔰国外流量',
+        'DOMAIN-SUFFIX,steamgames.com,🔰国外流量',
+        'DOMAIN-SUFFIX,steamusercontent.com,🔰国外流量',
+        'DOMAIN-SUFFIX,steampowered.com,🔰国外流量',
+        'DOMAIN-SUFFIX,steamcontent.com,🔰国外流量',
+        'DOMAIN-SUFFIX,steamstatic.com,🔰国外流量',
+        'DOMAIN-SUFFIX,steamcdn-a.akamaihd.net,🔰国外流量',
+        'DOMAIN-SUFFIX,steamstat.us,🔰国外流量',
     ];
     const usProxyGroup = {
         name: '🇺🇸美国节点',
