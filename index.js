@@ -14,6 +14,7 @@ module.exports.parse = async (raw, { axios, yaml, notify, console }, { name, url
         'DOMAIN-SUFFIX,steamstatic.com,🔰国外流量',
         'DOMAIN-SUFFIX,steamcdn-a.akamaihd.net,🔰国外流量',
         'DOMAIN-SUFFIX,steamstat.us,🔰国外流量',
+        'DOMAIN-SUFFIX,qq.com,🔰国外流量',
         'DOMAIN-SUFFIX,dota2.com,DIRECT',
     ];
     const usProxyGroup = {
